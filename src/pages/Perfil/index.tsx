@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import DishCard from '../../components/DishCard'
 import Modal from '../../components/Modal'
 import type { Restaurante, Prato } from '../../types'
@@ -9,13 +9,19 @@ import {
   Title,
   Category,
   Container,
-  Grid
+  Grid,
+  BackButton
 } from './styles'
 
 const Perfil = () => {
   const { id } = useParams()
   const [restaurante, setRestaurante] = useState<Restaurante | null>(null)
   const [pratoSelecionado, setPratoSelecionado] = useState<Prato | null>(null)
+    const navigate = useNavigate()
+
+    const voltar = () => {
+      navigate('/')
+    }
 
   useEffect(() => {
   fetch('https://api-ebac.vercel.app/api/efood/restaurantes')
@@ -33,6 +39,9 @@ const Perfil = () => {
   return (
     <>
       <Banner style={{ backgroundImage: `url(${restaurante.capa})` }}>
+      <BackButton onClick={voltar}>
+        ← Voltar aos restaurantes
+      </BackButton>
         <BannerContent>
           <Category>{restaurante.tipo}</Category>
           <Title>{restaurante.titulo}</Title>

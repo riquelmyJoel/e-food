@@ -19,9 +19,9 @@ export const Container = styled.div`
   padding: 32px;
   position: relative;
 
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 24px;
+  display: block;
+  justify-content; space-between;
+  align-items: center;
 `
 
 export const Close = styled.button`
@@ -39,6 +39,7 @@ export const Image = styled.img`
   width: 100%;
   height: 280px;
   object-fit: cover;
+  
 `
 
 export const Title = styled.h3`
