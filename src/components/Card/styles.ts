@@ -22,7 +22,7 @@ export const Title = styled.h3`
 `
 
 export const Description = styled.p`
-  margin: 8px 0;
+  margin: 8px 0 16px;
   font-size: 14px;
   line-height: 22px;
 `
@@ -34,4 +34,5 @@ export const Button = styled.button`
   padding: 8px 16px;
   cursor: pointer;
   font-weight: 700;
+  border-radius: 8px;
 `

@@ -51,3 +51,11 @@ export const Text = styled.p`
   font-size: 14px;
   line-height: 22px;
 `
+export const AddButton = styled.button`
+  margin-top: auto;
+  padding: 8px;
+  background-color: #e66767;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+`

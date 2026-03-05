@@ -1,34 +1,36 @@
 import styled from 'styled-components'
-import fundo from '../../assets/fundo.png'
 
-export const Container = styled.header`
-  background-image: url(${fundo});
-  background-size: cover;
-  background-position: center;
-  height: 384px;
+export const HeaderContainer = styled.header`
+  width: 100%;
+  padding: 40px 0;
+  background-repeat: repeat;
+`
 
+export const Container = styled.div`
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+`
+
+export const Nav = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
 
-  text-align: center;
+  span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e66767;
+  }
+
+  img {
+    height: 60px;
+  }
 `
-
-export const Logo = styled.img`
-  width: 125px;
-  margin-bottom: 24px;
-`
-
-export const Subtitle = styled.span`
-  font-size: 18px;
-  font-weight: 400;
-  color: #e66767; /* mesma cor do footer */
-`
-
-export const Title = styled.h1`
-  font-size: 36px;
-  font-weight: 900;
-  color: #e66767; /* mesma cor do footer */
+export const CartButton = styled.button`
+  background-color: transparent;
+  border: none;
+  color: #e66767;
+  font-weight: bold;
+  cursor: pointer;
 `
