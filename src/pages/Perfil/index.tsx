@@ -38,17 +38,19 @@ const Perfil = () => {
 
   return (
     <>
-      <Banner style={{ backgroundImage: `url(${restaurante.capa})` }}>
-      <BackButton onClick={voltar}>
-        ← Voltar aos restaurantes
-      </BackButton>
-        <BannerContent>
-          <Category>{restaurante.tipo}</Category>
-          <Title>{restaurante.titulo}</Title>
-        </BannerContent>
-      </Banner>
+      
+        <Banner style={{ backgroundImage: `url(${restaurante.capa})` }}>
+        <BackButton onClick={voltar}>
+          ← Voltar aos restaurantes
+        </BackButton>
+          <BannerContent>
+            <Category>{restaurante.tipo}</Category>
+            <Title>{restaurante.titulo}</Title>
+          </BannerContent>
+        </Banner>
+      
 
-      <Container>
+      <Container className='container'>
         <Grid>
           {restaurante.cardapio.map((p) => (
             <DishCard
@@ -61,7 +63,7 @@ const Perfil = () => {
           ))}
         </Grid>
       </Container>
-
+  
       {pratoSelecionado && (
         <Modal prato={pratoSelecionado} onClose={() => setPratoSelecionado(null)} />
       )}

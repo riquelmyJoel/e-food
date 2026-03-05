@@ -4,6 +4,15 @@ export const Banner = styled.section`
   height: 280px;
   background-size: cover;
   background-position: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
 `
 
 export const BannerContent = styled.div`
@@ -15,6 +24,10 @@ export const BannerContent = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  
+  position: relative;
+  z-index: 1;
+
 `
 
 export const Category = styled.span`
@@ -26,12 +39,14 @@ export const Title = styled.h1`
   font-size: 36px;
   font-weight: 900;
   color: #fff;
+  
 `
 
 export const Container = styled.main`
   max-width: 1024px;
   margin: 0 auto;
   padding: 40px 16px;
+
 `
 
 export const Grid = styled.div`
@@ -49,6 +64,8 @@ export const BackButton = styled.button`
   font-weight: bold;
   cursor: pointer;
   border-radius: 8px;
+  position: relative;
+  z-index: 3;
 
   margin-left: 16px;
   margin-top: 8px;
