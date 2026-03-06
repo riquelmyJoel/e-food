@@ -28,9 +28,10 @@ const Home = () => {
               key={r.id}
               id={r.id}
               titulo={r.titulo}
-              descricao={r.tipo}
-              imagem={r.capa}
-            />
+              descricao={r.descricao}
+              imagem={r.capa} 
+              tipo={r.tipo} 
+              avaliacao={r.avaliacao}            />
           ))}
         </Grid>
       </Container>

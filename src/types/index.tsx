@@ -12,4 +12,6 @@ export type Restaurante = {
   tipo: string
   capa: string
   cardapio: Prato[]
+  avaliacao: number
+  descricao: string
 }

@@ -1,4 +1,6 @@
-import { Container, Image, Content, Title, Description, Button } from './styles'
+import * as S from './styles'
+import Tag from '../Tag'
+
 import { Link } from 'react-router-dom'
 
 type Props = {
@@ -6,19 +8,30 @@ type Props = {
   titulo: string
   descricao: string
   imagem: string
+  tipo: string
+  avaliacao: number
 }
 
-const Card = ({ id, titulo, descricao, imagem }: Props) => (
-  <Container>
-    <Image src={imagem} alt={titulo} />
-    <Content>
-      <Title>{titulo}</Title>
-      <Description>{descricao}</Description>
-      <Button as={Link} to={`/restaurante/${id}`}>
+const Card = ({ id, titulo, descricao, imagem, tipo, avaliacao }: Props) => (
+  <S.Container>
+    <S.Image src={imagem} alt={titulo} />
+    <S.Content>      
+      <S.TagsContainer>
+      <Tag>{tipo}</Tag>
+        <Tag>
+          {avaliacao} 
+        </Tag>
+      </S.TagsContainer>
+      <S.Title>{titulo}</S.Title>
+      <S.Description>{descricao}</S.Description>
+
+        
+      
+      <S.Button as={Link} to={`/restaurante/${id}`}>
         Saiba mais
-      </Button>
-    </Content>
-  </Container>
+      </S.Button>
+    </S.Content>
+  </S.Container>
 )
 
 export default Card

@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
+
 export const Container = styled.div`
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
+  position: relative;
 `
 
 export const Image = styled.img`
@@ -25,6 +27,11 @@ export const Description = styled.p`
   margin: 8px 0 16px;
   font-size: 14px;
   line-height: 22px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `
 
 export const Button = styled.button`
@@ -35,4 +42,15 @@ export const Button = styled.button`
   cursor: pointer;
   font-weight: 700;
   border-radius: 8px;
+`
+
+export const TagsContainer = styled.div`
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  display: flex;
+  gap: 8px;
+
+  
 `
