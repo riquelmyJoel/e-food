@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { cores } from '../../styles'
 
 export const Container = styled.div`
   max-width: 1024px;
@@ -12,7 +13,7 @@ export const Item = styled.div`
   align-items: center;
   gap: 16px;
 
-  background-color: #fff;
+  background-color: ${cores.background};
   padding: 16px;
   margin-bottom: 16px;
   border-radius: 8px;
@@ -31,13 +32,13 @@ export const Item = styled.div`
 
   span {
     font-weight: bold;
-    color: #e66767;
+    color: ${cores.primary};
   }
 
   button {
     margin-left: auto;
-    background-color: #e66767;
-    color: #fff;
+    background-color: ${cores.primary};
+    color: ${cores.text};
     border: none;
     padding: 8px 12px;
     cursor: pointer;
@@ -52,7 +53,7 @@ export const Total = styled.div`
 
   margin-top: 24px;
   padding: 16px;
-  background-color: #ffe5e5;
+  background-color: ${cores.background};
   border-radius: 8px;
 
   span {
@@ -61,6 +62,6 @@ export const Total = styled.div`
 
   strong {
     font-size: 20px;
-    color: #e66767;
+    color: ${cores.primary};
   }
 `

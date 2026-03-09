@@ -1,27 +1,28 @@
 import styled from 'styled-components'
+import { cores } from '../../styles'
 
 export const Overlay = styled.div`
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  z-index: 999;
 `
 
 export const Container = styled.div`
-  background-color: #fff;
+  background-color: ${cores.primary};
   max-width: 1024px;
   width: 100%;
   padding: 32px;
   position: relative;
 
-  display: block;
-  justify-content; space-between;
-  align-items: center;
+  display: flex;
+  gap: 24px;
 `
 
 export const Close = styled.button`
@@ -36,7 +37,7 @@ export const Close = styled.button`
 `
 
 export const Image = styled.img`
-  width: 100%;
+  width: 280px;
   height: 280px;
   object-fit: cover;
   
@@ -45,18 +46,29 @@ export const Image = styled.img`
 export const Title = styled.h3`
   font-size: 18px;
   font-weight: 900;
+  margin-bottom: 16px;
 `
 
 export const Text = styled.p`
   margin-top: 8px;
   font-size: 14px;
   line-height: 22px;
+  display: flex;
+  flex-direction: column;
 `
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: ${cores.text};
+`
+
 export const AddButton = styled.button`
   margin-top: auto;
   padding: 8px;
-  background-color: #e66767;
-  color: #fff;
+  background-color: ${cores.secundary};
+  color: ${cores.primary};
   border: none;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
 `

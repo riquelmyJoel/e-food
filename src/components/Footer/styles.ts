@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import { cores } from '../../styles'
 
 export const Container = styled.footer`
-  background-color: #e66767;
+  background-color: ${cores.secundary};
   padding: 40px 16px;
 
   display: flex;
@@ -19,5 +20,5 @@ export const Text = styled.p`
   max-width: 480px;
   font-size: 14px;
   line-height: 22px;
-  color: #fff;
+  color: ${cores.primary};
 `

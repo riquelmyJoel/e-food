@@ -1,5 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
 
+export const cores = {
+    primary: '#e66767',
+    secundary: '#FFEBD9',
+    background: '#f5f5f5',
+    text: '#eeeeee',
+}
+
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -11,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: Roboto, sans-serif;
-    background-color: #f5f5f5;
+    background-color: ${cores.background};
   }
 `
 

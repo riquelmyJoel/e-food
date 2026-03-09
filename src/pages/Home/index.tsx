@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
-import Header from '../../components/Header'
 import Card from '../../components/Card'
-import Footer from '../../components/Footer'
 import { Container, Grid } from './styles'
 import type { Restaurante } from '../../types'
 
@@ -20,7 +18,6 @@ const Home = () => {
 
   return (
     <>
-      <Header />
       <Container>
         <Grid>
           {restaurantes.map((r) => (
@@ -35,7 +32,6 @@ const Home = () => {
           ))}
         </Grid>
       </Container>
-      <Footer />
     </>
   )
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { cores } from '../../styles'
 
 export const Overlay = styled.div`
   position: fixed;
@@ -21,6 +22,11 @@ export const Item = styled.div`
   display: flex;
   gap: 12px;
   margin-bottom: 16px;
+  background-color: ${cores.secundary};
+  border-radius: 8px;
+  padding: 16px;
+  color: ${cores.primary};
+  font-size: 14px;
 
   img {
     width: 80px;
@@ -32,8 +38,9 @@ export const Item = styled.div`
     margin-left: auto;
     background: none;
     border: none;
-    color: #fff;
+    color: ${cores.primary};
     cursor: pointer;
+    font-size: 14px;
   }
 `
 
@@ -48,8 +55,11 @@ export const CheckoutButton = styled.button`
   width: 100%;
   margin-top: 16px;
   padding: 12px;
-  background: #ffbebe;
+  background: ${cores.secundary};
+  color: ${cores.primary};
   border: none;
   cursor: pointer;
   border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
 `

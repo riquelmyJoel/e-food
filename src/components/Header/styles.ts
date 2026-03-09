@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { cores } from '../../styles'
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -20,7 +21,7 @@ export const Nav = styled.div`
   span {
     font-size: 18px;
     font-weight: bold;
-    color: #e66767;
+    color: ${cores.primary};
   }
 
   img {
@@ -30,7 +31,7 @@ export const Nav = styled.div`
 export const CartButton = styled.button`
   background-color: transparent;
   border: none;
-  color: #e66767;
+  color: ${cores.primary};
   font-weight: bold;
   cursor: pointer;
 `

@@ -1,11 +1,13 @@
 import styled from 'styled-components'
+import { cores } from '../../styles'
 
 
 export const Container = styled.div`
-  background-color: #fff;
+  background-color: ${cores.background};
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+  border: 3px solid ${cores.primary};
 `
 
 export const Image = styled.img`
@@ -35,8 +37,8 @@ export const Description = styled.p`
 `
 
 export const Button = styled.button`
-  background-color: #e66767;
-  color: #fff;
+  background-color: ${cores.primary};
+  color: ${cores.text};
   border: none;
   padding: 8px 16px;
   cursor: pointer;

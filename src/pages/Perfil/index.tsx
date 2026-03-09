@@ -59,6 +59,8 @@ const Perfil = () => {
               descricao={p.descricao}
               imagem={p.foto}
               onClick={() => setPratoSelecionado(p)}
+              onClose={() => setPratoSelecionado(null)}
+              prato={p}
             />
           ))}
         </Grid>

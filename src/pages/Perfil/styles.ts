@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { cores } from '../../styles'
 
 export const Banner = styled.section`
   height: 280px;
@@ -32,13 +33,13 @@ export const BannerContent = styled.div`
 
 export const Category = styled.span`
   font-size: 18px;
-  color: #fff;
+  color: ${cores.text};
 `
 
 export const Title = styled.h1`
   font-size: 36px;
   font-weight: 900;
-  color: #fff;
+  color: ${cores.text};
   
 `
 

@@ -1,4 +1,4 @@
-import { Overlay, Container, Close, Image, Title, Text, AddButton } from './styles'
+import { Overlay, Container, Close, Image, Title, Text, AddButton, Content } from './styles'
 import type { Prato } from '../../types'
 import { useDispatch, useSelector } from 'react-redux'
 import { adicionar } from '../../store/reducers/carrinho'
@@ -29,12 +29,15 @@ const Modal = ({ prato, onClose }: Props) => {
       <Container>
         <Close onClick={onClose}>×</Close>
         <Image src={prato.foto} />
-        <Title>{prato.nome}</Title>
-        <Text>{prato.descricao}</Text>
-        <Text>R$ {prato.preco.toFixed(2)}</Text>
-        <AddButton onClick={adicionarAoCarrinho}>
-          Adicionar ao carrinho
-        </AddButton>
+        <Content>
+          <Title>{prato.nome}</Title>
+          <Text>{prato.descricao}</Text>
+          <Text>R$ {prato.preco.toFixed(2)}</Text>
+          <AddButton onClick={adicionarAoCarrinho}>
+            Adicionar ao carrinho
+          </AddButton>
+        </Content>
+        
       </Container>
     </Overlay>
   )
