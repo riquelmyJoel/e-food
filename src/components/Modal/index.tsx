@@ -1,5 +1,5 @@
 import { Overlay, Container, Close, Image, Title, Text, AddButton, Content } from './styles'
-import type { Prato } from '../../types'
+import type { Prato  } from '../../types'
 import { useDispatch, useSelector } from 'react-redux'
 import { adicionar } from '../../store/reducers/carrinho'
 import type { RootState } from '../../store'
@@ -9,7 +9,7 @@ type Props = {
   onClose: () => void
 }
 
-const Modal = ({ prato, onClose }: Props) => {
+const Modal = ({ prato, onClose,  }: Props) => {
     const dispatch = useDispatch()
     
       const itens = useSelector((state: RootState) => state.carrinho.itens)
@@ -33,6 +33,7 @@ const Modal = ({ prato, onClose }: Props) => {
           <Title>{prato.nome}</Title>
           <Text>{prato.descricao}</Text>
           <Text>R$ {prato.preco.toFixed(2)}</Text>
+          <Text>{prato.porcao}</Text>
           <AddButton onClick={adicionarAoCarrinho}>
             Adicionar ao carrinho
           </AddButton>
