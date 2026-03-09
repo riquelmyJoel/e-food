@@ -21,12 +21,13 @@ export const Content = styled.div`
 `
 
 export const Title = styled.h3`
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
 `
 
 export const Description = styled.p`
-  margin: 8px 0 16px;
+  margin-bottom: 24px;
   font-size: 14px;
   line-height: 22px;
 

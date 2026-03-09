@@ -25,14 +25,16 @@ export const Content = styled.div`
 `
 
 export const Title = styled.h3`
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
 `
 
 export const Description = styled.p`
   margin: 8px 0;
   font-size: 14px;
   line-height: 22px;
+  margin-bottom: 16px;
 `
 
 export const Button = styled.button`
