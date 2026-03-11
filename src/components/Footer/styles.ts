@@ -4,6 +4,7 @@ import { cores } from '../../styles'
 export const Container = styled.footer`
   background-color: ${cores.secundary};
   padding: 40px 16px;
+  margin-top: 100px;
 
   display: flex;
   flex-direction: column;
