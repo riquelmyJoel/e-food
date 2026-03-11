@@ -31,7 +31,9 @@ const Home = () => {
               descricao={r.descricao}
               imagem={r.capa} 
               tipo={r.tipo} 
-              avaliacao={r.avaliacao}            />
+              avaliacao={r.avaliacao}
+              destacado={r.destacado}          
+              />
           ))}
         </Grid>
       </Container>

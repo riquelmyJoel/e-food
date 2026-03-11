@@ -11,22 +11,22 @@ type Props = {
   imagem: string
   tipo: string
   avaliacao: number
+  destacado: boolean
 }
 
-const Card = ({ id, titulo, descricao, imagem, tipo, avaliacao }: Props) => (
+const Card = ({ id, titulo, descricao, imagem, tipo, avaliacao, destacado }: Props) => (
   <S.Container>
     <S.Image src={imagem} alt={titulo} />
     <S.Content>      
       <S.TagsContainer>
       <Tag>{tipo}</Tag>
-      
+      {destacado&&<Tag>Em destaque</Tag>}
       </S.TagsContainer>
 
       <S.Title>{titulo}
         <S.Rating>
             <img src={estrela} alt=""   />
             <span>{avaliacao} </span>
-          
         </S.Rating>
         
         
