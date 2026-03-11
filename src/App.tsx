@@ -1,18 +1,33 @@
+import { BrowserRouter, useLocation } from 'react-router-dom'
 import CartDrawer from './components/CartDrawer'
 import Footer from './components/Footer'
-import Header from './components/Header'
 import Router from './routes'
 import GlobalStyle from './styles'
 
-function App() {
+const AppContent = () => {
+  const location = useLocation()
+
+  const estaNoRestaurante = location.pathname.startsWith('/restaurante')
+
   return (
     <>
       <GlobalStyle />
-      <Header />
+
+
       <Router />
+
+      {estaNoRestaurante && <CartDrawer />}
+
       <Footer />
-      <CartDrawer />
     </>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
   )
 }
 

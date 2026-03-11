@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Card from '../../components/Card'
 import { Container, Grid } from './styles'
 import type { Restaurante } from '../../types'
+import HeaderHome from '../../components/HeaderHome'
 
 const Home = () => {
   const [restaurantes, setRestaurantes] = useState<Restaurante[]>([])
@@ -18,7 +19,9 @@ const Home = () => {
 
   return (
     <>
+    <HeaderHome />
       <Container>
+        
         <Grid>
           {restaurantes.map((r) => (
             <Card

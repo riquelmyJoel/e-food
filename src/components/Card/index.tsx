@@ -1,5 +1,6 @@
 import * as S from './styles'
 import Tag from '../Tag'
+import estrela from '../../assets/estrela.png'
 
 import { Link } from 'react-router-dom'
 
@@ -18,11 +19,18 @@ const Card = ({ id, titulo, descricao, imagem, tipo, avaliacao }: Props) => (
     <S.Content>      
       <S.TagsContainer>
       <Tag>{tipo}</Tag>
-        <Tag>
-          {avaliacao} 
-        </Tag>
+      
       </S.TagsContainer>
-      <S.Title>{titulo}</S.Title>
+
+      <S.Title>{titulo}
+        <S.Rating>
+            <img src={estrela} alt=""   />
+            <span>{avaliacao} </span>
+          
+        </S.Rating>
+        
+        
+        </S.Title>
       <S.Description>{descricao}</S.Description>
 
         

@@ -4,10 +4,11 @@ import { cores } from '../../styles'
 
 export const Container = styled.div`
   background-color: ${cores.background};
-  border-radius: 8px;
   overflow: hidden;
   position: relative;
-  border: 3px solid ${cores.primary};
+  border: 2px solid ${cores.primary};
+  width: 472px;
+  height: auto;
 `
 
 export const Image = styled.img`
@@ -18,9 +19,13 @@ export const Image = styled.img`
 
 export const Content = styled.div`
   padding: 16px;
+  
 `
 
 export const Title = styled.h3`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 16px;
@@ -43,8 +48,10 @@ export const Button = styled.button`
   border: none;
   padding: 8px 16px;
   cursor: pointer;
-  font-weight: 700;
-  border-radius: 8px;
+  font-weight: bold;
+  width: 82px;
+  height: 24px;
+  margin-bottom: 24px;
 `
 
 export const TagsContainer = styled.div`
@@ -54,6 +61,22 @@ export const TagsContainer = styled.div`
 
   display: flex;
   gap: 8px;
-
   
+`
+
+export const Rating = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+
+  span {
+    font-size: 18px;
+    font-weight: bold;
+  }
 `

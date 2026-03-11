@@ -22,3 +22,11 @@ export const Text = styled.p`
   line-height: 22px;
   color: ${cores.primary};
 `
+
+export const List = styled.ul`
+  display: flex;
+`
+
+export const Item = styled.li`
+  margin: 0 0 16px 8px;
+`

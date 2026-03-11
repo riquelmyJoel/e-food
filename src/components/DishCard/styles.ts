@@ -8,8 +8,8 @@ export const Container = styled.div`
   background-color: ${cores.primary};
   color: ${cores.secundary};
   padding: 8px;
-
-
+  width: 320px;
+  height: auto;
 `
 
 export const Image = styled.img`
@@ -19,6 +19,8 @@ export const Image = styled.img`
 `
 
 export const Content = styled.div`
+  
+  
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -35,16 +37,11 @@ export const Description = styled.p`
   font-size: 14px;
   line-height: 22px;
   margin-bottom: 16px;
-`
 
-export const Button = styled.button`
-  width: 100%;
-  background-color: ${cores.secundary};
-  color: ${cores.primary};
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `
 
 export const AddButton2 = styled.button`

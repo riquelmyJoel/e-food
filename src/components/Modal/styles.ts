@@ -12,6 +12,7 @@ export const Overlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 `
 
 export const Container = styled.div`
@@ -23,6 +24,7 @@ export const Container = styled.div`
 
   display: flex;
   gap: 24px;
+  
 `
 
 export const Close = styled.button`
