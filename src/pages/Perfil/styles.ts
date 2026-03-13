@@ -28,14 +28,14 @@ export const BannerContent = styled.div`
 `
 
 export const Category = styled.span`
-  font-size: 18px;
+  font-size: 32px;
   color: ${cores.text};
   font-weight: 100;
   z-index: 1;
 `
 
 export const Title = styled.h1`
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 900;
   color: ${cores.text};
   z-index: 1;
