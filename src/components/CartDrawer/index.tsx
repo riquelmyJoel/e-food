@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux'
 import type { RootState } from '../../store'
 import { remover, fechar } from '../../store/reducers/carrinho'
+import lixeira from '../../assets/lixeira.png'
 import * as S from './styles'
 
 const CartDrawer = () => {
@@ -17,7 +18,6 @@ const CartDrawer = () => {
   return (
     <S.Overlay onClick={() => dispatch(fechar())}>
       <S.Container onClick={(e) => e.stopPropagation()}>
-        <h2>Carrinho</h2>
 
         {itens.map((item) => (
           <S.Item key={item.id}>
@@ -29,7 +29,7 @@ const CartDrawer = () => {
             </div>
 
             <button onClick={() => dispatch(remover(item.id))}>
-              Remover
+              <img style={{height: '16px', width: '16px'}} src={lixeira} />
             </button>
           </S.Item>
         ))}

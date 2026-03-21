@@ -23,8 +23,8 @@ export const Item = styled.div`
   display: flex;
   gap: 12px;
   margin-bottom: 16px;
+  margin-top: 16px;
   background-color: ${cores.secundary};
-  border-radius: 8px;
   padding: 16px;
   color: ${cores.primary};
   font-size: 14px;
@@ -48,13 +48,13 @@ export const Item = styled.div`
 export const Total = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
+  margin-top: 40px;
   font-weight: bold;
 `
 
 export const CheckoutButton = styled.button`
   width: 100%;
-  margin-top: 16px;
+  margin-top: 30px;
   padding: 12px;
   background: ${cores.secundary};
   color: ${cores.primary};
@@ -64,3 +64,4 @@ export const CheckoutButton = styled.button`
   font-weight: bold;
   font-size: 14px;
 `
+

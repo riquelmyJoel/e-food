@@ -1,7 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux'
+
 import { Container, Image, Content, Title, Description, AddButton2 } from './styles'
-import type { RootState } from '../../store'
-import { adicionar } from '../../store/reducers/carrinho'
 import type { Prato } from '../../types'
 
 type Props = {
@@ -14,21 +12,9 @@ type Props = {
   
 }
 
-const DishCard = ({ nome, descricao, imagem, onClick, prato, onClose}: Props) => {
-      const dispatch = useDispatch()
+const DishCard = ({ nome, descricao, imagem, onClick}: Props) => {
     
-      const itens = useSelector((state: RootState) => state.carrinho.itens)
 
-    const adicionarAoCarrinho = () => {
-    const quantidade = itens.filter((item) => item.id === prato.id).length
-
-    if (quantidade >= 1) {
-      alert('Você adicionou esse item novamente ao carrinho!')
-    }
-
-    dispatch(adicionar(prato))
-    onClose()
-  }
 
     return (
     <Container onClick={onClick}>
@@ -36,10 +22,7 @@ const DishCard = ({ nome, descricao, imagem, onClick, prato, onClose}: Props) =>
       <Content>
         <Title>{nome}</Title>
         <Description>{descricao}</Description>
-        <AddButton2 onClick={(e) => {
-          e.stopPropagation()
-          adicionarAoCarrinho()
-          }}>
+        <AddButton2 onClick={onClick}>
                   Adicionar ao carrinho
         </AddButton2>
       </Content>
