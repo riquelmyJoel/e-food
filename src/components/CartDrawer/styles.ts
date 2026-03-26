@@ -52,7 +52,9 @@ export const Total = styled.div`
   font-weight: bold;
 `
 
-export const CheckoutButton = styled.button`
+export const CheckoutButton = styled.button<{ disabled?: boolean }>`
+  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
   width: 100%;
   margin-top: 30px;
   padding: 12px;

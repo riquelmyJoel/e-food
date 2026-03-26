@@ -5,16 +5,21 @@ export type Produto = {
   nome: string
   foto: string
   preco: number
+
 }
 
 type CarrinhoState = {
   itens: Produto[]
   aberto: boolean
+  etapa: 'cart' | 'checkout' | 'payment' | 'sucess'
+  pedidoId: ''
 }
 
 const initialState: CarrinhoState = {
   itens: [],
-  aberto: false
+  aberto: false,
+  etapa: 'cart',
+  pedidoId: ''
 }
 
 const carrinhoSlice = createSlice({
@@ -35,11 +40,43 @@ const carrinhoSlice = createSlice({
     },
     fechar: (state) => {
       state.aberto = false
+      state.etapa = 'cart'
+    },
+    irParaCheckout: (state) => {
+      state.etapa= 'checkout'
+    },
+    irParaPayment: (state) => {
+      state.etapa= 'payment'
+    },
+    finalizarPedido: (state) => {
+      state.etapa= 'sucess'
+      state.itens= []
+    },
+    setPedidoId: (state, action) => {
+      state.pedidoId = action.payload
+    },
+    voltarParaCart: (state) => {
+      state.etapa = 'cart'
+    },
+    voltarParaCheckout: (state) => {
+      state.etapa = 'checkout'
     }
+    
   }
 })
 
-export const { adicionar, remover, abrir, fechar } =
+export const { 
+  adicionar, 
+  remover, 
+  abrir, 
+  fechar, 
+  irParaCheckout, 
+  irParaPayment, 
+  finalizarPedido, 
+  setPedidoId, 
+  voltarParaCart, 
+  voltarParaCheckout 
+} =
   carrinhoSlice.actions
 
 export default carrinhoSlice.reducer
